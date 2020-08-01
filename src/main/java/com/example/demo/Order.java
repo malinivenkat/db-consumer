@@ -8,23 +8,23 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Order {
 	@Id
-	private int orderId;
+	private long orderId;
 	private List<Product> products;
 	
 	public Order() {
 		
 	}
 	
-	public Order(int orderId, List<Product> products) {
+	public Order(long orderId, List<Product> products) {
 		super();
 		this.orderId = orderId;
 		this.products = products;
 	}
 	
-	public int getOrderId() {
+	public long getOrderId() {
 		return orderId;
 	}
-	public void setOrderId(int orderId) {
+	public void setOrderId(long orderId) {
 		this.orderId = orderId;
 	}
 	public List<Product> getProducts() {
